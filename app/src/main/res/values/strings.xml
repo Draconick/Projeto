@@ -1,0 +1,19 @@
+<resources>
+    //Strings Tela de Login
+
+    <string name="app_name">Projeto</string>
+    <string name="login">Login</string>
+    <string name="usuario">Usuário:</string>
+    <string name="senha">Senha:</string>
+    <string name="entrar">Entrar</string>
+    <string name="novo_usuario">Criar novo usuário?</string>
+
+    //Strings Tela de Cadastro
+
+    <string name="cadastro_usuario">Cadastrar Usuário</string>
+    <string name="nome_cadastro">Nome Completo:</string>
+    <string name="email_cadastro">E-mail:</string>
+    <string name="tel_cadastro">Telefone:</string>
+    <string name="data_cadastro">Data de Nascimento: </string>
+
+</resources>
