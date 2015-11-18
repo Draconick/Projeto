@@ -15,5 +15,8 @@
     <string name="email_cadastro">E-mail:</string>
     <string name="tel_cadastro">Telefone:</string>
     <string name="data_cadastro">Data de Nascimento: </string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="cadastro_sucesso">Usuário cadastrado com sucesso!!</string>
+    <string name="cadastro_invalido">Campo(s) inválido(s), tente novamente!</string>
 
 </resources>
