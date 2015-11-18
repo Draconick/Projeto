@@ -7,14 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 
 import java.util.Calendar;
 
-/**
- * Created by Katrina on 17/11/2015.
- */
 public class CadastroUsuarioActivity extends Activity {
-
+    private EditText editUser, editSenha,editNome,editEmail,editTel;
     private int ano, mes, dia;
     private Button dataCadastro;
 
@@ -22,7 +20,14 @@ public class CadastroUsuarioActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.usuario_cadastro_layout);
+        //Campos de Cadastro
+        editUser = (EditText) findViewById(R.id.edit_cadastro_user);
+        editSenha = (EditText) findViewById(R.id.edit_cadastro_senha);
+        editNome = (EditText) findViewById(R.id.edit_cadastro_nome);
+        editEmail = (EditText) findViewById(R.id.edit_cadastro_email);
+        editTel = (EditText) findViewById(R.id.edit_cadastro_telefone);
 
+        //Calendário Data Nascimento
         Calendar calendar = Calendar.getInstance();
         ano = calendar.get(Calendar.YEAR);
         mes = calendar.get(Calendar.MONTH);

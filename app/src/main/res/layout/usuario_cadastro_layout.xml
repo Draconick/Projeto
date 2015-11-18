@@ -14,122 +14,120 @@
         android:textColor="@color/White"
         android:textStyle="bold"
         android:gravity="center"/>
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/Gainsboro"
-        android:orientation="vertical"
-        android:layout_weight="1">
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Gainsboro"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/usuario"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/Black"/>
+            <EditText
+                android:id="@+id/edit_cadastro_user"
+                android:paddingLeft="5dp"
+                android:hint="Informe seu usuário"
+                android:background="@drawable/edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="text"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/Black"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/senha"/>
+            <EditText
+                android:id="@+id/edit_cadastro_senha"
+                android:paddingLeft="5dp"
+                android:hint="Digite sua senha"
+                android:background="@drawable/edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textPassword"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/Black"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nome_cadastro"/>
+            <EditText
+                android:id="@+id/edit_cadastro_nome"
+                android:paddingLeft="5dp"
+                android:hint="Informe seu nome"
+                android:background="@drawable/edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="text"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/Black"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_cadastro"/>
+            <EditText
+                android:id="@+id/edit_cadastro_email"
+                android:paddingLeft="5dp"
+                android:hint="Informe seu E-mail"
+                android:background="@drawable/edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textEmailAddress"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/Black"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tel_cadastro"/>
+            <EditText
+                android:id="@+id/edit_cadastro_telefone"
+                android:paddingLeft="5dp"
+                android:hint="Informe seu número celular/residencial"
+                android:background="@drawable/edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="phone"/>
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/Black"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_cadastro"/>
+            <Button
+                android:background="@drawable/edit_text_style"
+                android:id="@+id/cadastro_data"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:onClick="selecionarData"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Criar"
+                android:background="@drawable/edit_text_style"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+    </ScrollView>
 
 
-        </ScrollView>
-        <TextView
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/usuario"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@color/Black"/>
-        <EditText
-            android:id="@+id/edit_cadastro_user"
-            android:paddingLeft="5dp"
-            android:hint="Informe seu usuário"
-            android:background="@drawable/edit_text_style"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="text"/>
-        <TextView
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/Black"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/senha"/>
-        <EditText
-            android:id="@+id/edit_cadastro_senha"
-            android:paddingLeft="5dp"
-            android:hint="Digite sua senha"
-            android:background="@drawable/edit_text_style"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="textPassword"/>
-        <TextView
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/Black"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nome_cadastro"/>
-        <EditText
-            android:id="@+id/edit_cadastro_nome"
-            android:paddingLeft="5dp"
-            android:hint="Informe seu nome"
-            android:background="@drawable/edit_text_style"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="text"/>
-        <TextView
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/Black"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/email_cadastro"/>
-        <EditText
-            android:id="@+id/edit_cadastro_email"
-            android:paddingLeft="5dp"
-            android:hint="Informe seu E-mail"
-            android:background="@drawable/edit_text_style"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="textEmailAddress"/>
-        <TextView
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/Black"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tel_cadastro"/>
-        <EditText
-            android:id="@+id/edit_cadastro_telefone"
-            android:paddingLeft="5dp"
-            android:hint="Informe seu número celular/residencial"
-            android:background="@drawable/edit_text_style"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:inputType="phone"/>
-        <TextView
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/Black"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/data_cadastro"/>
-        <Button
-            android:background="@drawable/edit_text_style"
-            android:id="@+id/cadastro_data"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:onClick="selecionarData"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="Criar"
-            android:background="@drawable/edit_text_style"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/SteelBlue"
-        android:layout_weight="8">
-
-    </LinearLayout>
 </LinearLayout>
