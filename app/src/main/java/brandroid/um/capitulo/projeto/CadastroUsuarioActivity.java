@@ -13,6 +13,7 @@ import android.widget.Toast;
 import java.util.Calendar;
 import java.util.Date;
 
+import brandroid.um.capitulo.projeto.dados.RepositorioUsuarios;
 import brandroid.um.capitulo.projeto.modelo.Usuario;
 
 public class CadastroUsuarioActivity extends Activity {
@@ -20,6 +21,8 @@ public class CadastroUsuarioActivity extends Activity {
     private int ano, mes, dia;
     private Button dataCadastro;
     private Usuario usuario;
+    private RepositorioUsuarios repositorioUsuarios;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,8 @@ public class CadastroUsuarioActivity extends Activity {
         editNome = (EditText) findViewById(R.id.edit_cadastro_nome);
         editEmail = (EditText) findViewById(R.id.edit_cadastro_email);
         editTel = (EditText) findViewById(R.id.edit_cadastro_telefone);
+
+        repositorioUsuarios = new RepositorioUsuarios(this);
 
         //Calendário Data Nascimento
         Calendar calendar = Calendar.getInstance();
@@ -74,13 +79,13 @@ public class CadastroUsuarioActivity extends Activity {
         String nome = editNome.getText().toString();
         String email = editEmail.getText().toString();
         String telefone = editTel.getText().toString();
-        Date datanasc = new Date(ano,mes,dia);
         if(user.isEmpty() || senha.isEmpty() || nome.isEmpty() ||
                 email.isEmpty() || telefone.isEmpty()){
         Toast toast = Toast.makeText(this,R.string.cadastro_invalido, Toast.LENGTH_SHORT);
         toast.show();
         } else {
-            usuario = new Usuario(user,senha,nome,email,telefone,datanasc);
+            usuario = new Usuario(user,senha,nome,email,telefone);
+            repositorioUsuarios.inserir(usuario);
             Toast toast = Toast.makeText(this, R.string.cadastro_sucesso, Toast.LENGTH_SHORT);
             toast.show();
             finish();

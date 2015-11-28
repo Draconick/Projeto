@@ -3,6 +3,7 @@ package brandroid.um.capitulo.projeto.dados;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 /**
  * Created by Katrina on 17/11/2015.
@@ -16,8 +17,7 @@ public class UsuarioOpenHelper extends SQLiteOpenHelper {
             "senha text not null," +
             "nome text not null," +
             "email text not null," +
-            "telefone text not null," +
-            "datanasc date not null)";
+            "telefone text not null)";
 
     public UsuarioOpenHelper(Context contexto){
         super(contexto,DATABASE_NAME, null, DATABASE_VERSION);

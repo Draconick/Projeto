@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import brandroid.um.capitulo.projeto.dados.RepositorioUsuarios;
 import brandroid.um.capitulo.projeto.modelo.Administrador;
 import brandroid.um.capitulo.projeto.modelo.Pessoa;
 import brandroid.um.capitulo.projeto.modelo.Usuario;
@@ -20,6 +21,7 @@ public class MainActivity extends Activity {
     private Pessoa pessoa;
     private List<Usuario> usuariosCadastrados;
     private List<Administrador> administradoresCadastrados;
+    private RepositorioUsuarios repositorioUsuarios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,19 +29,22 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main_activity);
         textUser = (EditText) findViewById(R.id.edit_user);
         textSenha = (EditText) findViewById(R.id.edit_senha);
+        repositorioUsuarios = new RepositorioUsuarios(this);
 
         usuariosCadastrados = new ArrayList<>();
         administradoresCadastrados = new ArrayList<>();
-        Date jv = new Date(1994,12,1);
-        administradoresCadastrados.add(new Administrador("admin","129461","1315","13654","16498",jv));
+        administradoresCadastrados.add(new Administrador("admin","129461","1315","13654","16498"));
     }
     //Carregar dados do Banco de dados
     @Override
     protected void onResume() {
         super.onResume();
+        carregarUsuarios();
+    }
+    public void carregarUsuarios(){
+        usuariosCadastrados = repositorioUsuarios.listar();
 
     }
-
     //Métodos para tela Dashboard
     public void login(View view){
         activityLogar();

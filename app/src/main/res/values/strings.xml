@@ -19,4 +19,20 @@
     <string name="cadastro_sucesso">Usuário cadastrado com sucesso!!</string>
     <string name="cadastro_invalido">Campo(s) inválido(s), tente novamente!</string>
 
+
+    //Strings Dashboard Admin
+
+    <string name="dashboard_admin">Menu Principal</string>
+    <string name="cadastrar_produto">Cadastrar Produto</string>
+    <string name="atualizar_produto">Gerenciar Usuários</string>
+    <string name="fechamento_dia">Fechar Caixa</string>
+    <string name="logout">Sair</string>
+
+    //Strings Dashboard User
+
+    <string name="Dashboard_user">Menu Principal</string>
+    <string name="comprar_produto">Comprar Produto</string>
+    <string name="rever_pedido">Ver Pedido</string>
+    <string name="atualizar_cadastro">Atualizar Cadastro</string>
+
 </resources>

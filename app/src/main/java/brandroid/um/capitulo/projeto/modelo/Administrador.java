@@ -8,7 +8,7 @@ import java.util.Date;
 public class Administrador extends Pessoa {
 
 
-    public Administrador(String user, String senha, String nome, String email, String telefone, Date datanasc) {
-        super(user, senha, nome, email, telefone, datanasc);
+    public Administrador(String user, String senha, String nome, String email, String telefone) {
+        super(user, senha, nome, email, telefone);
     }
 }

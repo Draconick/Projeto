@@ -13,12 +13,11 @@ public class AdministradorOpenHelper extends SQLiteOpenHelper {
             "senha text not null," +
             "nome text not null," +
             "email text not null," +
-            "telefone text not null," +
-            "datanasc date not null)";
+            "telefone text not null)";
     private static final String SQL_INSERT_ADMIN = "INSERT INTO " + TABELA_ADMIN +"(" +
             "usuario,senha,nome,email,telefone,datanasc) values of" +
             "('admin','jv129461','João Victor da Cunha Oliveira','jvictorco94@hotmail.com'," +
-            "'81998051570',TO_DATE('01/12/1994', 'DD/MM/YYYY'))";
+            "'81998051570')";
 
 
     public AdministradorOpenHelper(Context contexto){
