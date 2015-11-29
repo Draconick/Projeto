@@ -7,6 +7,9 @@
     <string name="senha">Senha:</string>
     <string name="entrar">Entrar</string>
     <string name="novo_usuario">Criar novo usuário?</string>
+    <string name="login_sucesso">Login (Usuário) efetuado com Sucesso!</string>
+    <string name="login_erro">Usuário/senha Invalido(s)!</string>
+    <string name="admin_login_sucesso">Login (Administrador) efetuado com Sucesso!</string>
 
     //Strings Tela de Cadastro
 

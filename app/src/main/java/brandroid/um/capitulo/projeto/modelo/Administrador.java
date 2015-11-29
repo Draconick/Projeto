@@ -11,4 +11,6 @@ public class Administrador extends Pessoa {
     public Administrador(String user, String senha, String nome, String email, String telefone) {
         super(user, senha, nome, email, telefone);
     }
+
+
 }

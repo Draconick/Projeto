@@ -15,7 +15,7 @@ public class AdministradorOpenHelper extends SQLiteOpenHelper {
             "email text not null," +
             "telefone text not null)";
     private static final String SQL_INSERT_ADMIN = "INSERT INTO " + TABELA_ADMIN +"(" +
-            "usuario,senha,nome,email,telefone,datanasc) values of" +
+            "usuario,senha,nome,email,telefone) values" +
             "('admin','jv129461','João Victor da Cunha Oliveira','jvictorco94@hotmail.com'," +
             "'81998051570')";
 

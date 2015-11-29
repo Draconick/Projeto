@@ -43,9 +43,9 @@
             android:layout_alignParentRight="true"
             android:layout_alignTop="@id/cadastrar_produto"
             android:layout_marginRight="50dp"
-            android:drawableTop="@drawable/update_product"
+            android:drawableTop="@drawable/user_manager"
             android:clickable="true"
-            android:onClick="atualizarProduto"/>
+            android:onClick="gerenciarUsuarios"/>
         <TextView
             android:id="@+id/fechar_caixa"
             android:layout_width="wrap_content"
