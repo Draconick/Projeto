@@ -17,7 +17,8 @@ public class UsuarioOpenHelper extends SQLiteOpenHelper {
             "senha text not null," +
             "nome text not null," +
             "email text not null," +
-            "telefone text not null)";
+            "telefone text not null," +
+            "datanasc text not null)";
 
     public UsuarioOpenHelper(Context contexto){
         super(contexto,DATABASE_NAME, null, DATABASE_VERSION);

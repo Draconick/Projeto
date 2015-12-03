@@ -79,12 +79,13 @@ public class CadastroUsuarioActivity extends Activity {
         String nome = editNome.getText().toString();
         String email = editEmail.getText().toString();
         String telefone = editTel.getText().toString();
+        String datanasc = dataCadastro.getText().toString();
         if(user.isEmpty() || senha.isEmpty() || nome.isEmpty() ||
                 email.isEmpty() || telefone.isEmpty()){
         Toast toast = Toast.makeText(this,R.string.cadastro_invalido, Toast.LENGTH_SHORT);
         toast.show();
         } else {
-            usuario = new Usuario(user,senha,nome,email,telefone);
+            usuario = new Usuario(user,senha,nome,email,telefone,datanasc);
             repositorioUsuarios.inserir(usuario);
             Toast toast = Toast.makeText(this, R.string.cadastro_sucesso, Toast.LENGTH_SHORT);
             toast.show();

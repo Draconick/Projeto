@@ -31,6 +31,27 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name=".ListarProduto">
+            <intent-filter>
+                <action android:name="intent.listar.produto"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".CadastroProdutoActivity">
+            <intent-filter>
+                <action android:name="intent.cadastro.produto"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".EditarProdutoActivity">
+            <intent-filter>
+                <action android:name="intent.editar.produto"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

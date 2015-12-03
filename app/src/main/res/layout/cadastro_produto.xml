@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/SteelBlue">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastrar_produto"
+        android:textStyle="bold"
+        android:textColor="@color/White"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Gainsboro"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nome_produto"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/Black"/>
+        <EditText
+            android:paddingLeft="5dp"
+            android:id="@+id/nome_produto"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_text_style"
+            android:inputType="text"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/categoria_produto"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/Black"/>
+        <Spinner
+            android:id="@+id/categoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/categoria">
+
+        </Spinner>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/qntd_estoque"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/Black"/>
+        <EditText
+            android:paddingLeft="5dp"
+            android:id="@+id/qnt_estoque"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_text_style"
+            android:inputType="number"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/valor_produto"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/Black"/>
+        <EditText
+            android:paddingLeft="5dp"
+            android:id="@+id/preco_produto"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_text_style"
+            android:inputType="numberDecimal"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/preco_produto"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/Black"/>
+        <EditText
+            android:paddingLeft="5dp"
+            android:id="@+id/valor_produto"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edit_text_style"
+            android:inputType="numberDecimal"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/confirmacao_produto_button"
+            android:text="@string/cadastrar"
+            android:layout_gravity="bottom|end"
+            android:background="@drawable/edit_text_style"
+            android:onClick="cadastrarProduto"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -19,7 +19,7 @@
     <string name="tel_cadastro">Telefone:</string>
     <string name="data_cadastro">Data de Nascimento: </string>
     <string name="cadastrar">Cadastrar</string>
-    <string name="cadastro_sucesso">Usuário cadastrado com sucesso!!</string>
+    <string name="cadastro_sucesso">Usuário cadastrado com sucesso!</string>
     <string name="cadastro_invalido">Campo(s) inválido(s), tente novamente!</string>
 
 
@@ -33,9 +33,30 @@
 
     //Strings Dashboard User
 
-    <string name="Dashboard_user">Menu Principal</string>
+    <string name="dashboard_user">Menu Principal</string>
     <string name="comprar_produto">Comprar Produto</string>
     <string name="rever_pedido">Ver Pedido</string>
     <string name="atualizar_cadastro">Atualizar Cadastro</string>
 
+    //Strings Cadastrar Produto
+
+    <string name="lista_produto">Produtos</string>
+    <string name="adicionar_produto">Adicionar Novo Produto</string>
+    <string name="nome_produto">Nome Produto:</string>
+    <string name="categoria_produto">Selecione a Categoria</string>
+    <string name="categoria">Categoria</string>
+    <string-array name="produto_categoria_lista">
+        <item>Alimentício</item>
+        <item>Eletrônico</item>
+        <item>Lazer</item>
+        <item>Outros</item>
+    </string-array>
+    <string name="qntd_estoque">Quantidade em Estoque:</string>
+    <string name="valor_produto">Preço:</string>
+    <string name="preco_produto">Valor de Compra(Unidade):</string>
+    <string name="produto_sucesso">Produto cadastrado com sucesso!</string>
+
+    //Listar Produto
+    <string name="produto_excluir">Produto excluído com Sucesso</string>
+    <string name="produto_msg_excluir">Deseja excluir o Produto ?</string>
 </resources>

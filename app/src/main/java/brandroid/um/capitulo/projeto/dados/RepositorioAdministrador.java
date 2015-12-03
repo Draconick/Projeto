@@ -22,7 +22,7 @@ public class RepositorioAdministrador {
     public List<Administrador> listar(){
         SQLiteDatabase db = administradorOpenHelper.getWritableDatabase();
         Cursor cursor = db.query(administradorOpenHelper.TABELA_ADMIN,
-                new String[]{"usuario", "senha", "nome", "email", "telefone"}, null, null, null, null, null);
+                new String[]{"usuario", "senha", "nome", "email", "telefone","datanasc"}, null, null, null, null, null);
         List<Administrador> listarAdministrador = new ArrayList<Administrador>();
         while(cursor.moveToNext()){
             String user = cursor.getString(cursor.getColumnIndex("usuario"));
@@ -30,7 +30,8 @@ public class RepositorioAdministrador {
             String nome = cursor.getString(cursor.getColumnIndex("nome"));
             String email = cursor.getString(cursor.getColumnIndex("email"));
             String telefone = cursor.getString(cursor.getColumnIndex("telefone"));
-            Administrador administrador = new Administrador(user,senha,nome,email,telefone);
+            String datanasc = cursor.getString(cursor.getColumnIndex("datanasc"));
+            Administrador administrador = new Administrador(user,senha,nome,email,telefone,datanasc);
             listarAdministrador.add(administrador);
         }
         return listarAdministrador;

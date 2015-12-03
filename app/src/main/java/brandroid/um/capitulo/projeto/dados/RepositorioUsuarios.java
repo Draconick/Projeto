@@ -32,6 +32,7 @@ public class RepositorioUsuarios {
         valores.put("nome", usuario.getNome());
         valores.put("email", usuario.getEmail());
         valores.put("telefone", usuario.getTelefone());
+        valores.put("datanasc",usuario.getDatanasc());
         db.insert(usuarioOpenHelper.TABELA_USUARIO,null,valores);
         db.close();
     }
@@ -43,7 +44,7 @@ public class RepositorioUsuarios {
         SQLiteDatabase db = this.usuarioOpenHelper.getWritableDatabase();
         Cursor cursor = db.query(
                 usuarioOpenHelper.TABELA_USUARIO,
-                new String[]{"usuario", "senha", "nome", "email", "telefone"},
+                new String[]{"usuario", "senha", "nome", "email", "telefone","datanasc"},
                 null, null, null, null, null);
         List<Usuario> listaUsuario = new ArrayList<Usuario>();
         while (cursor.moveToNext()){
@@ -52,7 +53,8 @@ public class RepositorioUsuarios {
             String nome = cursor.getString(cursor.getColumnIndex("nome"));
             String email = cursor.getString(cursor.getColumnIndex("email"));
             String telefone = cursor.getString(cursor.getColumnIndex("telefone"));
-                Usuario usuario = new Usuario(user,senha,nome,email,telefone);
+            String datanasc = cursor.getString(cursor.getColumnIndex("datanasc"));
+                Usuario usuario = new Usuario(user,senha,nome,email,telefone,datanasc);
                 listaUsuario.add(usuario);
 
         }

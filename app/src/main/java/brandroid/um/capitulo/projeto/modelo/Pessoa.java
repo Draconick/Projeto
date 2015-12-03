@@ -11,14 +11,16 @@ public class Pessoa {
     private String nome;
     private String email;
     private String telefone;
+    private String datanasc;
 
 
-    public Pessoa(String user, String senha, String nome, String email, String telefone) {
+    public Pessoa(String user, String senha, String nome, String email, String telefone, String datanasc) {
         this.user = user;
         this.senha = senha;
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
+        this.datanasc = datanasc;
     }
 
     public Pessoa(String user, String senha) {
@@ -64,5 +66,13 @@ public class Pessoa {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public String getDatanasc() {
+        return datanasc;
+    }
+
+    public void setDatanasc(String datanasc) {
+        this.datanasc = datanasc;
     }
 }
