@@ -1,5 +1,6 @@
 package brandroid.um.capitulo.projeto.dados;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -18,7 +19,23 @@ public class RepositorioAdministrador {
     public RepositorioAdministrador(Context context){
         administradorOpenHelper = new AdministradorOpenHelper(context);
     }
-
+    public void adicionar(Administrador administrador){
+        SQLiteDatabase db = administradorOpenHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("usuario", administrador.getUser());
+        values.put("senha",administrador.getSenha());
+        values.put("nome",administrador.getNome());
+        values.put("email",administrador.getEmail());
+        values.put("telefone",administrador.getTelefone());
+        values.put("datanasc", administrador.getDatanasc());
+        db.insert(administradorOpenHelper.TABELA_ADMIN,null,values);
+        db.close();
+    }
+    public void deletar(Administrador administrador){
+        SQLiteDatabase db = administradorOpenHelper.getWritableDatabase();
+        db.delete(administradorOpenHelper.TABELA_ADMIN,
+                "usuario = '"+administrador.getUser() + "'",null);
+    }
     public List<Administrador> listar(){
         SQLiteDatabase db = administradorOpenHelper.getWritableDatabase();
         Cursor cursor = db.query(administradorOpenHelper.TABELA_ADMIN,

@@ -37,7 +37,9 @@ public class RepositorioUsuarios {
         db.close();
     }
     public void deletar(Usuario usuario) {
-
+        SQLiteDatabase db = this.usuarioOpenHelper.getWritableDatabase();
+        db.delete(UsuarioOpenHelper.TABELA_USUARIO,"usuario ='" + usuario.getUser()+ "'",null);
+        db.close();
     }
 
     public List<Usuario> listar(){

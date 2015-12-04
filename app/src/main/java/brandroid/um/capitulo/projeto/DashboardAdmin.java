@@ -16,13 +16,16 @@ public class DashboardAdmin extends Activity {
         cadastrarProdutoActivity();
     }
     public void cadastrarProdutoActivity(){
-        Intent it = new Intent(this,ListarProduto.class);
+        Intent it = new Intent(this,ListarProdutoActivity.class);
         startActivity(it);
     }
     public void gerenciarUsuarios(View view){
-
+        gerenciarUsuariosActivity();
     }
-
+    private void gerenciarUsuariosActivity(){
+        Intent it = new Intent(this, ListarUsuarioActivity.class);
+        startActivity(it);
+    }
     public void fecharCaixa(View view){
 
     }

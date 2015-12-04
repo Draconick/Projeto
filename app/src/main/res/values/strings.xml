@@ -40,6 +40,7 @@
 
     //Strings Cadastrar Produto
 
+    <string name="alterar_produto">Produto Alterado com Sucesso!</string>
     <string name="lista_produto">Produtos</string>
     <string name="adicionar_produto">Adicionar Novo Produto</string>
     <string name="nome_produto">Nome Produto:</string>
@@ -59,4 +60,16 @@
     //Listar Produto
     <string name="produto_excluir">Produto excluído com Sucesso</string>
     <string name="produto_msg_excluir">Deseja excluir o Produto ?</string>
+
+    //Listar Usuario
+    <string name="user_list">Usuários</string>
+    <string name="admin_list">Administradores</string>
+    <string name="excluir_user">Deseja excluir o Usuário?</string>
+    <string name="user_excluido">Usuário excluído com Sucesso!</string>
+
+    //Listar Administrador
+    <string name="admin_excluir">Deseja excluir o Administrador?</string>
+    <string name="admin_excluido">Administrador excluído com Sucesso!</string>
+
+
 </resources>

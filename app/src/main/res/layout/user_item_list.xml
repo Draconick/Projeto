@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+    android:id="@+id/user_list"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="USUARIO"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:layout_marginLeft="5dp"
+    android:textColor="@color/Black"/>
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/list_nome_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome Completo"
+        android:layout_below="@id/user_list"
+        android:textSize="15sp"
+        android:textColor="@color/Black"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/list_email_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail"
+        android:layout_below="@id/list_nome_user"
+        android:textColor="@color/Black"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/list_datanasc_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Nascimento"
+        android:layout_below="@id/list_email_user"
+        android:textColor="@color/Black"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"/>
+    <TextView
+        android:id="@+id/list_telefone_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:layout_below="@id/list_datanasc_user"
+        android:textColor="@color/Black"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/list_senha_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="SENHA"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/Black"
+        android:layout_marginRight="5dp"/>
+
+
+</RelativeLayout>

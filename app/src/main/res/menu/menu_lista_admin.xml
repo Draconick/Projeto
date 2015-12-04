@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/menu_listar_editar" android:title="Editar"/>
-    <item android:id="@+id/menu_listar_excluir" android:title="Excluir"/>
+    <item android:id="@+id/menu_admin_excluir" android:title="Excluir"/>
+    <item android:id="@+id/menu_admin_user" android:title="Rebaixar a Usuário"/>
 </menu>

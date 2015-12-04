@@ -7,7 +7,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import brandroid.um.capitulo.projeto.dados.RepositorioProdutos;
 import brandroid.um.capitulo.projeto.modelo.Produto;
@@ -25,6 +28,7 @@ public class EditarProdutoActivity extends Activity {
     private double preco,valordeCompra;
     String produtoAlterado;
     private Button buttonAlterar;
+    private TextView alterarText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,9 +40,11 @@ public class EditarProdutoActivity extends Activity {
         editQntEstoque = (EditText) findViewById(R.id.qnt_estoque);
         editPreco = (EditText) findViewById(R.id.preco_produto);
         editValorDeCompra = (EditText) findViewById(R.id.valor_produto);
+        alterarText = (TextView) findViewById(R.id.text_product);
         repositorioProdutos = new RepositorioProdutos(this);
 
         buttonAlterar.setText("Atualizar");
+        alterarText.setText("Alterar Produto");
         ArrayAdapter<CharSequence> adapter =
                 ArrayAdapter.createFromResource(this,R.array.produto_categoria_lista,
                         android.R.layout.simple_spinner_item);
@@ -74,7 +80,7 @@ public class EditarProdutoActivity extends Activity {
         } else {
             produto = new Produto(nomeProduto, categoria, qntEstoque, preco, valordeCompra);
             repositorioProdutos.atualizar(produto, produtoAlterado);
-            Toast toast = Toast.makeText(this,R.string.produto_sucesso,Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(this,R.string.alterar_produto,Toast.LENGTH_SHORT);
             toast.show();
             setResult(RESULT_OK,null);
             finish();

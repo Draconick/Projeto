@@ -20,7 +20,7 @@ import brandroid.um.capitulo.projeto.modelo.Produto;
 /**
  * Created by Katrina on 01/12/2015.
  */
-public class ListarProduto extends Activity {
+public class ListarProdutoActivity extends Activity {
     private static final int TELA_EDICAO = 1;
 
     private RepositorioProdutos repositorioProdutos;
@@ -33,7 +33,7 @@ public class ListarProduto extends Activity {
         lista = (ListView) findViewById(R.id.lista_produtos_admin);
         registerForContextMenu(this.lista);
         repositorioProdutos = new RepositorioProdutos(this);
-        carregarProdutos();
+
     }
 
     @Override
@@ -52,7 +52,7 @@ public class ListarProduto extends Activity {
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        getMenuInflater().inflate(R.menu.menu_lista_admin, menu);
+        getMenuInflater().inflate(R.menu.menu_lista_product, menu);
     }
 
     @Override

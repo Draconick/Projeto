@@ -31,7 +31,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ListarProduto">
+        <activity android:name=".ListarProdutoActivity">
             <intent-filter>
                 <action android:name="intent.listar.produto"/>
 
@@ -48,6 +48,20 @@
         <activity android:name=".EditarProdutoActivity">
             <intent-filter>
                 <action android:name="intent.editar.produto"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ListarUsuarioActivity">
+            <intent-filter>
+                <action android:name="intent.listar.usuario"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ListarAdministradoresActivity">
+            <intent-filter>
+                <action android:name="intent.listar.administrador"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
