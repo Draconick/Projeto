@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_user_dial" android:title="Ligar para Usuário"/>
     <item android:id="@+id/menu_user_excluir" android:title="Excluir"/>
     <item android:id="@+id/menu_user_admin" android:title="Promover a Administrador"/>
 

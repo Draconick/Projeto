@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.MenuItem;
@@ -63,6 +64,9 @@ public class ListarUsuarioActivity extends Activity {
                 (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         Usuario usuario = (Usuario) this.lista.getItemAtPosition(info.position);
         switch(item.getItemId()){
+            case R.id.menu_user_dial:
+                ligarUsuario(usuario.getTelefone());
+                return true;
             case R.id.menu_user_admin:
                 promoverUsuario(usuario);
                 return true;
@@ -109,6 +113,12 @@ public class ListarUsuarioActivity extends Activity {
     }
     private void listarAdministradoresActivity(){
         Intent it = new Intent(this, ListarAdministradoresActivity.class);
+        startActivity(it);
+    }
+
+    private void ligarUsuario(String numero){
+        Intent it = new Intent(Intent.ACTION_CALL);
+        it.setData(Uri.parse("tel: "+ numero));
         startActivity(it);
     }
 }
