@@ -41,8 +41,24 @@ public class RepositorioProdutos {
         valores.put("preco", produto.getPreco());
         valores.put("valorCompra", produto.getValordeCompra());
         valores.put("unidadesCompradas", produto.getUnidadesCompradas());
-        db.update(ProdutoOpenHelper.TABELA_PRODUTO,valores, "nome = '" + nome+"'",null);
+        db.update(ProdutoOpenHelper.TABELA_PRODUTO, valores, "nome = '" + nome + "'", null);
         db.close();
+    }
+    public void atualizarUnidadesCompradas(Produto produto, int unidadesCompradas){
+        SQLiteDatabase db = this.produtoOpenHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("qntestoque", produto.getQntEstoque() - unidadesCompradas);
+        values.put("unidadesCompradas", produto.getUnidadesCompradas() + unidadesCompradas);
+        db.update(produtoOpenHelper.TABELA_PRODUTO,values,
+                "nome = '" + produto.getNomeProduto()+"'", null);
+        db.close();
+    }
+    public void zerarUnidadesCompradas(Produto produto){
+        SQLiteDatabase db = this.produtoOpenHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("unidadesCompradas", 0);
+        db.update(produtoOpenHelper.TABELA_PRODUTO,values,
+                "nome ='"+produto.getNomeProduto()+"'",null);
     }
     public void deletar(Produto produto){
         SQLiteDatabase db = this.produtoOpenHelper.getWritableDatabase();

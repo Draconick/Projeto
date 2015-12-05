@@ -7,6 +7,7 @@
     android:background="@color/SteelBlue">
 
     <TextView
+        android:id="@+id/cadastrar_usuario"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:text="@string/cadastro_usuario"
@@ -116,6 +117,7 @@
                 android:onClick="selecionarData"/>
 
             <Button
+                android:id="@+id/cadastro_usuario"
                 android:onClick="cadastrarUsuario"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"

@@ -2,7 +2,7 @@
     package="brandroid.um.capitulo.projeto">
 
     <application android:allowBackup="true" android:label="@string/app_name"
-        android:icon="@mipmap/ic_launcher" android:theme="@style/AppTheme">
+        android:icon="@mipmap/ic_launcher2" android:theme="@style/AppTheme">
     <activity android:name=".MainActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
@@ -62,6 +62,34 @@
         <activity android:name=".ListarAdministradoresActivity">
             <intent-filter>
                 <action android:name="intent.listar.administrador"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".EditarUsuarioActivity">
+            <intent-filter>
+                <action android:name="intent.alterar.usuario"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ComprarProdutoActivity">
+            <intent-filter>
+                <action android:name="intent.comprar.produto"/>
+
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".VerPedidoActivity">
+            <intent-filter>
+                <action android:name="intent.ver.pedido"/>
+
+                <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".fecharCaixaActivity">
+            <intent-filter>
+                <action android:name="intent.fechar.caixa"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>

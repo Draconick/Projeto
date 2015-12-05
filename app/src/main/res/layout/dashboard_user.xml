@@ -31,7 +31,7 @@
             android:onClick="comprarProduto"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="120dp"
-            android:drawableTop="@drawable/new_product"/>
+            android:drawableTop="@drawable/buy_product"/>
         <TextView
             android:id="@+id/ver_pedido"
             android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignTop="@id/comprar_produto"
             android:layout_marginRight="70dp"
-            android:drawableTop="@drawable/update_product"
+            android:drawableTop="@drawable/see_order"
             android:clickable="true"
             android:onClick="verPedido"/>
         <TextView
@@ -57,7 +57,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignLeft="@id/comprar_produto"
             android:layout_marginBottom="120dp"
-            android:drawableTop="@drawable/day_resolution"
+            android:drawableTop="@drawable/update_user"
+
             android:layout_alignRight="@+id/comprar_produto"
             android:layout_alignEnd="@+id/comprar_produto"
             android:clickable="true"

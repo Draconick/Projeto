@@ -16,7 +16,7 @@ public class ProdutoOpenHelper extends SQLiteOpenHelper {
             "categoria text not null," +
             "qntestoque integer not null," +
             "preco real not null," +
-            "valorCompra integer not null," +
+            "valorCompra real not null," +
             "unidadesCompradas integer not null)";
 
     public ProdutoOpenHelper(Context contexto){

@@ -38,10 +38,21 @@ public class RepositorioUsuarios {
     }
     public void deletar(Usuario usuario) {
         SQLiteDatabase db = this.usuarioOpenHelper.getWritableDatabase();
-        db.delete(UsuarioOpenHelper.TABELA_USUARIO,"usuario ='" + usuario.getUser()+ "'",null);
+        db.delete(UsuarioOpenHelper.TABELA_USUARIO, "usuario ='" + usuario.getUser() + "'", null);
         db.close();
     }
-
+    public void alterar(Usuario usuario, String user){
+        SQLiteDatabase db = usuarioOpenHelper.getWritableDatabase();
+        ContentValues valores = new ContentValues();
+        valores.put("usuario",usuario.getUser());
+        valores.put("senha",usuario.getSenha());
+        valores.put("nome", usuario.getNome());
+        valores.put("email", usuario.getEmail());
+        valores.put("telefone", usuario.getTelefone());
+        valores.put("datanasc",usuario.getDatanasc());
+        db.update(usuarioOpenHelper.TABELA_USUARIO,valores,"usuario = '" + user + "'",null);
+        db.close();
+    }
     public List<Usuario> listar(){
         SQLiteDatabase db = this.usuarioOpenHelper.getWritableDatabase();
         Cursor cursor = db.query(

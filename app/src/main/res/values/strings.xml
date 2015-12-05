@@ -1,7 +1,7 @@
 <resources>
     //Strings Tela de Login
 
-    <string name="app_name">Projeto</string>
+    <string name="app_name">ControlDoid</string>
     <string name="login">Login</string>
     <string name="usuario">Usuário:</string>
     <string name="senha">Senha:</string>
@@ -21,6 +21,7 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="cadastro_sucesso">Usuário cadastrado com sucesso!</string>
     <string name="cadastro_invalido">Campo(s) inválido(s), tente novamente!</string>
+    <string name="cadastro_alterado">Cadastro Alterado com Sucesso!</string>
 
 
     //Strings Dashboard Admin
@@ -71,5 +72,15 @@
     <string name="admin_excluir">Deseja excluir o Administrador?</string>
     <string name="admin_excluido">Administrador excluído com Sucesso!</string>
 
+    //Comprar Produtos
+    <string name="finalizar_compra">Finalizar Compra</string>
+    <string name="msg_dialog_unidades">Quantas unidades deseja comprar?</string>
+
+    //Ver Pedidos
+    <string name="pedidos">Pedidos</string>
+
+    //Fechar Caixa
+    <string name="fechar_dia">Deseja realmente fechar o dia e gerar o lucro ?</string>
+    <string name="alert_dialog_fechar_caixa">Fechamento do Caixa</string>
 
 </resources>

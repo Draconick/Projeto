@@ -45,6 +45,7 @@ public class MainActivity extends Activity {
         super.onResume();
         carregarUsuarios();
         carregarAdministradores();
+        //Lógica para mensagem de Login
         login = false;
     }
     public void carregarUsuarios(){
@@ -71,6 +72,7 @@ public class MainActivity extends Activity {
             if(pessoa.getUser().equalsIgnoreCase(u.getUser()) &&
                     pessoa.getSenha().equals(u.getSenha())){
                 Intent it = new Intent(this,DashboardUser.class);
+                it.putExtra("User", u.getUser());
                 startActivity(it);
                 Toast toast = Toast.makeText(this,R.string.login_sucesso,Toast.LENGTH_SHORT);
                 toast.show();

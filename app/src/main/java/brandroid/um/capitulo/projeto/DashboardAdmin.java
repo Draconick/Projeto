@@ -27,7 +27,11 @@ public class DashboardAdmin extends Activity {
         startActivity(it);
     }
     public void fecharCaixa(View view){
-
+        fecharCaixaActivity();
+    }
+    public void fecharCaixaActivity(){
+        Intent it = new Intent(this, fecharCaixaActivity.class);
+        startActivity(it);
     }
     public void logout(View view){
         finish();

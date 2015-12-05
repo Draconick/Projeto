@@ -1,0 +1,59 @@
+package brandroid.um.capitulo.projeto.apresentacao;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import java.util.List;
+
+import brandroid.um.capitulo.projeto.R;
+import brandroid.um.capitulo.projeto.modelo.Pedido;
+
+/**
+ * Created by Katrina on 04/12/2015.
+ */
+public class PedidoAdminAdapter extends BaseAdapter {
+
+    private Context context;
+    private List<Pedido> pedidoList;
+    private LayoutInflater inflater;
+
+    public PedidoAdminAdapter(Context context, List<Pedido> pedidoList) {
+        this.context = context;
+        this.pedidoList = pedidoList;
+        this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
+
+    @Override
+    public int getCount() {
+        return pedidoList.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return pedidoList.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        View view = inflater.inflate(R.layout.pedido_admin_item_list, null);
+        Pedido pedido = pedidoList.get(position);
+        TextView txtUser = (TextView) view.findViewById(R.id.user_pedido_admin);
+        txtUser.setText(pedido.getUser());
+        TextView txtID = (TextView) view.findViewById(R.id.id_pedido_admin);
+        txtID.setText("Numero do Pedido:" + pedido.getId());
+        TextView txtValorPedido = (TextView) view.findViewById(R.id.valor_pedido_admin);
+        txtValorPedido.setText(String.format("R$%.2f", pedido.getValorPedido()));
+        TextView txtLucroPedido = (TextView) view.findViewById(R.id.lucro_pedido_admin);
+        txtLucroPedido.setText(String.format("R$%.2f", pedido.getLucroPedido()));
+        return view;
+    }
+}

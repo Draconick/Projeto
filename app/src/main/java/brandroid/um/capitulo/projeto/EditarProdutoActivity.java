@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.List;
+
 import brandroid.um.capitulo.projeto.dados.RepositorioProdutos;
 import brandroid.um.capitulo.projeto.modelo.Produto;
 
@@ -42,6 +44,7 @@ public class EditarProdutoActivity extends Activity {
         editValorDeCompra = (EditText) findViewById(R.id.valor_produto);
         alterarText = (TextView) findViewById(R.id.text_product);
         repositorioProdutos = new RepositorioProdutos(this);
+        List<Produto> produtoList = repositorioProdutos.listar();
 
         buttonAlterar.setText("Atualizar");
         alterarText.setText("Alterar Produto");
@@ -50,6 +53,14 @@ public class EditarProdutoActivity extends Activity {
                         android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spinnerCategoria.setAdapter(adapter);
+        for(Produto p : produtoList){
+            if(p.getNomeProduto().equalsIgnoreCase(produtoAlterado)){
+                editNomeProduto.setText(p.getNomeProduto());
+                editPreco.setText(String.valueOf(p.getPreco()));
+                editQntEstoque.setText(String.valueOf(p.getQntEstoque()));
+                editValorDeCompra.setText(String.valueOf(p.getValordeCompra()));
+            }
+        }
     }
 
     public void cadastrarProduto(View v) {

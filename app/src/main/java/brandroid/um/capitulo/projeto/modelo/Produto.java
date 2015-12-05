@@ -80,8 +80,7 @@ public class Produto {
     public void setUnidadesCompradas(int unidadesCompradas) {
         this.unidadesCompradas = unidadesCompradas;
     }
-
-    public double lucro(List<Produto> listaProduto){
+    public double FecharCaixa(List<Produto> listaProduto){
         double lucrodoDia = 0;
         for(Produto p : listaProduto){
             lucrodoDia = lucrodoDia +
