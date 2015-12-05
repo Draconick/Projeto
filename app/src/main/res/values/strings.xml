@@ -1,7 +1,7 @@
 <resources>
     //Strings Tela de Login
 
-    <string name="app_name">ControlDoid</string>
+    <string name="app_name">ControlDroid</string>
     <string name="login">Login</string>
     <string name="usuario">Usuário:</string>
     <string name="senha">Senha:</string>
