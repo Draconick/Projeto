@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -110,6 +111,8 @@ public class ComprarProdutoActivity extends Activity {
         for(Produto p : produtoList){
             repositorioProdutos.zerarUnidadesCompradas(p);
         }
+        Toast.makeText(getApplicationContext(),
+                R.string.pedido_realizado,Toast.LENGTH_SHORT).show();
         carregarProdutos();
         finish();
     }

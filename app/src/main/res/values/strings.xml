@@ -75,7 +75,7 @@
     //Comprar Produtos
     <string name="finalizar_compra">Finalizar Compra</string>
     <string name="msg_dialog_unidades">Quantas unidades deseja comprar?</string>
-
+    <string name="pedido_realizado">Pedido realizado com Sucesso!</string>
     //Ver Pedidos
     <string name="pedidos">Pedidos</string>
 
